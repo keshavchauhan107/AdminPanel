@@ -1,0 +1,155 @@
+/* backdrop dims & blocks clicks */
+.toast-backdrop {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    z-index: 9998;
+  }
+  
+  /* center toast box above backdrop */
+  .toast-container {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 320px;
+  }
+  
+  /* make invalid input border red */
+  input.is-invalid {
+    border: 1px solid #e74c3c;
+  }
+  
+  /* error message styling */
+  .error-text {
+    color: #e74c3c;
+    margin: 4px 0 8px;
+    font-size: 0.875rem;
+  }
+  
+  /* timers & resend */
+  .timers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .resend-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .resend-btn[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* submit button */
+  .submit-btn {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  /* OTP card container */
+.otp-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Title & subtitle */
+  .otp-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+  }
+  .otp-subtitle {
+    margin: 0.25rem 0 1rem;
+    font-size: 0.9rem;
+    color: rgb(70, 219, 70);
+  }
+  
+  /* ensure the dots align as slots */
+.otp-code-input {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  font-size: 2rem;
+  letter-spacing: 0.3rem;     /* spreads each character/dot out */
+  text-align: center;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  caret-color: transparent;    /* hide the blinking cursor if you like */
+}
+
+/* on focus, highlight the border */
+.otp-code-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.2);
+}
+
+/* keep invalid style as before */
+input.is-invalid.otp-code-input {
+  border-color: #e74c3c;
+}
+  
+  /* Error message below input */
+  .error-text {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Timers + resend row */
+  .timers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+  }
+  .expiry {
+    color: #555;
+  }
+  .resend-btn {
+    background: transparent;
+    border: none;
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #007bff;
+    padding: 0;
+  }
+  .resend-btn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Submit button */
+  .btn-submit {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #0062cc, #0056b3);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-submit:hover {
+    background: linear-gradient(90deg, #0056b3, #004494);
+  }
+  
