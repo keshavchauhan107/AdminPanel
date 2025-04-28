@@ -21,5 +21,37 @@
             We are working hard to correct this issue. Please wait a few moments and try your search again.
             <br>In the meantime, check out whats new on SmartAdmin WebApp:
         </h4>
+        <form #guessForm="ngForm" class="d-flex vh-100 bg-dark text-white align-items-center justify-content-center">
+            <div class="card bg-secondary bg-opacity-75 text-center shadow-lg" style="width: 22rem;">
+              <div class="card-body">
+                <h1 class="card-title display-4 text-warning mb-4">🎲 Guess the Number</h1>
+                <p class="card-text mb-3">Enter a guess between 1 and 1000</p>
+          
+                <div class="mb-3">
+                  <input
+                    name="guess"
+                    type="number"
+                    class="form-control form-control-lg text-center fw-bold"
+                    [(ngModel)]="numberValue"
+                    placeholder="Your guess…"
+                    min="1" max="1000"
+                    (keydown)="preventMinus($event)"
+                  />
+                </div>
+          
+                <button
+                  type="button"
+                  class="btn btn-warning btn-lg fw-bold w-100"
+                  (click)="onclick(guessForm)"
+                >
+                  Check!
+                </button>
+              </div>
+            </div>
+          </form>
+          
+          
+          
     </div>
+    
 </main>
